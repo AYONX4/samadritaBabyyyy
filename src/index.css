@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Romantic color palette */
+    --background: 20 50% 98%;
+    --foreground: 340 30% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 30% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 30% 25%;
+
+    --primary: 340 60% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 40% 90%;
+    --secondary-foreground: 280 30% 30%;
+
+    --muted: 340 30% 95%;
+    --muted-foreground: 340 20% 50%;
+
+    --accent: 120 30% 85%;
+    --accent-foreground: 120 40% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 30% 90%;
+    --input: 340 30% 90%;
+    --ring: 340 60% 65%;
+
+    --radius: 1rem;
+
+    /* Custom romantic colors */
+    --blush: 340 60% 85%;
+    --blush-deep: 340 50% 70%;
+    --lavender: 280 50% 88%;
+    --lavender-deep: 280 40% 75%;
+    --cream: 40 60% 96%;
+    --sage: 120 25% 75%;
+    --sage-deep: 120 30% 50%;
+    --rose-gold: 15 50% 70%;
+    --petal-pink: 350 70% 80%;
+    --sunflower-yellow: 45 90% 60%;
+    --tulip-coral: 15 70% 70%;
+    --lily-white: 60 30% 95%;
+  }
+
+  .dark {
+    --background: 340 30% 10%;
+    --foreground: 340 20% 95%;
+    --card: 340 30% 12%;
+    --card-foreground: 340 20% 95%;
+    --popover: 340 30% 12%;
+    --popover-foreground: 340 20% 95%;
+    --primary: 340 60% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 280 30% 20%;
+    --secondary-foreground: 280 20% 90%;
+    --muted: 340 30% 20%;
+    --muted-foreground: 340 20% 70%;
+    --accent: 120 25% 25%;
+    --accent-foreground: 120 20% 90%;
+    --border: 340 30% 20%;
+    --input: 340 30% 20%;
+    --ring: 340 60% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Great Vibes', cursive;
+  }
+}
+
+@layer components {
+  .font-script {
+    font-family: 'Great Vibes', cursive;
+  }
+
+  .font-body {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .text-gradient-romantic {
+    @apply bg-gradient-to-r from-[hsl(var(--blush-deep))] via-[hsl(var(--primary))] to-[hsl(var(--lavender-deep))] bg-clip-text text-transparent;
+  }
+
+  .bg-romantic-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--cream)) 0%,
+      hsl(var(--blush)) 50%,
+      hsl(var(--lavender)) 100%
+    );
+  }
+
+  .bg-soft-gradient {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--cream)) 0%,
+      hsl(var(--background)) 100%
+    );
+  }
+}
+
+/* Bloom animation for the intro flower */
+@keyframes bloom {
+  0% {
+    transform: scale(0) rotate(-10deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-bloom {
+  animation: bloom 1.5s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+.animate-petal-fall {
+  animation: petal-fall 6s linear infinite;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
+
+.animation-delay-800 {
+  animation-delay: 0.8s;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+.animation-delay-1500 {
+  animation-delay: 1.5s;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-2500 {
+  animation-delay: 2.5s;
+}
+
+.animation-delay-3000 {
+  animation-delay: 3s;
+}
+
+/* Glow animation for special moments */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(340, 60%, 70%, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(340, 60%, 70%, 0.6);
+  }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
