@@ -34,8 +34,8 @@ const IntroPage: React.FC<IntroPageProps> = ({ onEnter }) => {
             </p>
             
             <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed opacity-0 animate-fade-in-up animation-delay-2000" style={{ animationFillMode: 'forwards' }}>
-              You are the best thing I have in 2025/26.
-              Every moment with you feels like a gift I didn't know I was waiting for.
+              You are the best person I have ever meet.
+              Every moment with you feels like a gift.
             </p>
             
             <p className="font-script text-2xl md:text-3xl text-black opacity-0 animate-fade-in-up" style={{ animationDelay: '2.5s', animationFillMode: 'forwards' }}>
