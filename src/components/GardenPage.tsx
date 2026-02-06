@@ -287,7 +287,7 @@ const GardenPage: React.FC = () => {
                   </p>
                 </p>
                 <p className="font-script text-2xl md:text-3xl text-primary text-center leading-relaxed">
-                  Happy Flower Day samadritaa my babyyy, my cutieeepieeee, my kutkut
+                  Happy Flower Day samadritaa my babyyy, my cutieeepieeee
                 </p>
                 <div className="mt-6 flex justify-center gap-3">
                   <span className="text-xl animate-pulse-soft">💐</span>
